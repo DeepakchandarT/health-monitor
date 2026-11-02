@@ -64,6 +64,16 @@
     @keyframes jack-leg-right{0%,100%{transform:rotate(10deg)}50%{transform:rotate(-15deg)}}
     @keyframes ground-shadow{0%,100%{transform:scaleX(1);opacity:.8}50%{transform:scaleX(.65);opacity:.4}}
     @media(prefers-reduced-motion:reduce){.mascot-card .mascot-shadow{animation:none!important}}
+    /* Quiet surfaces, readable hierarchy, and a dedicated companion stage. */
+    :root{--ink:#172b3a;--muted:#718391;--blue:#128b88;--blue2:#35a9a0;--pink:#a9b7cc;--line:#e3eaee;--shadow:0 8px 24px #1832420a}
+    body{background:#eaf0f2;color:var(--ink)}.app{background:#f5f8f9;border:1px solid #fff;box-shadow:0 20px 65px #18324212;border-radius:20px}
+    .topbar{background:#fff;color:#172b3a;box-shadow:none;border:1px solid var(--line);border-radius:12px}.topbar:before,.topbar:after{display:none}.brand{font-size:17px;letter-spacing:-.6px}.brand-mark{background:#e4f4f0;color:#128b88}.icon-btn{color:#617682;background:#f2f6f7}.icon-btn:hover{background:#e4efee}.status-pill{color:#24766c;background:#eaf6f2;border:0}.dot.live{background:#18a887;box-shadow:none}
+    .controls{box-shadow:none;background:transparent;border:0;padding-left:4px;padding-right:4px}.overview-title strong{font-size:14px}.source-settings{color:#718391;font-weight:600}.btn{border-color:#dce6e8;color:#46616d}.btn.primary{background:#168b84;border-color:#168b84;color:white}
+    .card{box-shadow:0 2px 8px #18324204;border-radius:13px;border-color:#e3eaee}.head h2{font-weight:650;letter-spacing:-.2px}.head p{color:#7a8c98}.tag{color:#4f6878;background:#eef3f6;border-radius:20px;font-weight:650}.tag.synthetic{color:#167e6b;background:#e8f5ef}.tag.warn{color:#996922;background:#fff4dc}.range-tabs{display:none}
+    .summary{background:#f6f9fa;border:0;border-left:3px solid #b8dcd7;border-radius:6px}.summary:nth-child(2){border-color:#b6c5e6}.summary:nth-child(3){border-color:#e6cba3}.summary:nth-child(4){border-color:#b9ced6}.summary span{letter-spacing:.04em;color:#617581}.summary strong{font-weight:650;font-variant-numeric:tabular-nums;color:#203b49}.summary small{color:#7d8e98}
+    .mascot-card{background:linear-gradient(110deg,#173644,#234956);border:1px solid #294e5b;border-radius:14px;box-shadow:0 5px 16px #16364215}.mascot-card:before{display:none}.mascot-copy .kicker{color:#8fbdbb;letter-spacing:.12em}.mascot-copy h2{font-weight:600;letter-spacing:-.6px}.mascot-copy p{color:#b5cbd2}.activity-tag{color:#c9e7df;background:#ffffff08;border-color:#ffffff16;font-weight:500}.mascot-stage{background:radial-gradient(ellipse at 50% 55%,#8ebfbc30,transparent 65%);border-radius:50%}.mascot-fact{border:0;border-left:1px solid #ffffff24;border-radius:0;background:transparent;padding-left:14px}.mascot-fact span{color:#9fbcc5;font-weight:500;letter-spacing:.04em}.mascot-fact strong{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}.mascot-shadow{background:#081c26;filter:blur(3px)}.mascot-svg{filter:drop-shadow(3px 9px 5px #071c2755)}
+    .avatar.orange,.avatar.purple,.avatar.cyan,.avatar.pink{color:#52727d;background:#eaf1f3;border-radius:7px}.badge{color:#208272;background:#eaf5f0}.table-head{background:#f7f9fa;color:#7a8e99}.table-row{border-color:#edf1f3}.device-name strong{font-weight:600}.progress-icon,.progress-icon.pink{background:#e6f1ef;color:#258476}.fill.pink{background:#91acae}.footer{color:#85959f}.big-stat strong{font-weight:600}.ring-content strong,.current-stat strong{font-weight:650}
+    @media(min-width:1051px){.head h2{font-size:13px}.summary strong{font-size:20px}.mascot-card{grid-template-columns:minmax(0,1fr) 160px minmax(100px,.55fr)}.mascot-copy h2{font-size:21px}.legend-row{font-size:9px}.table-row{font-size:10px}.mascot-fact strong{font-size:16px}}
   </style>
 </head>
 <body>
@@ -103,14 +113,14 @@
               </defs>
               <g class="motion-lines" fill="none" stroke="#dbe5ff" stroke-width="4" stroke-linecap="round"><path d="M26 77l-9 7m143-7l9 7M37 36l-7-9m113 9l7-9"/></g>
               <g class="mascot-body">
-                <g class="mascot-leg-left"><path d="M74 118q-8 22-17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="20" stroke-linecap="round"/><ellipse cx="54" cy="161" rx="17" ry="9" fill="url(#mascotLimb)"/></g>
-                <g class="mascot-leg-right"><path d="M106 118q8 22 17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="20" stroke-linecap="round"/><ellipse cx="126" cy="161" rx="17" ry="9" fill="url(#mascotLimb)"/></g>
-                <g class="mascot-arm-left"><path d="M62 78Q43 90 37 115" fill="none" stroke="url(#mascotLimb)" stroke-width="17" stroke-linecap="round"/></g>
-                <g class="mascot-arm-right"><path d="M118 78q19 12 25 37" fill="none" stroke="url(#mascotLimb)" stroke-width="17" stroke-linecap="round"/></g>
-                <rect x="57" y="62" width="66" height="71" rx="32" fill="url(#mascotTorso)" stroke="#e8efff" stroke-width="1"/>
-                <ellipse cx="78" cy="80" rx="12" ry="27" fill="#fff" opacity=".28"/>
-                <circle cx="90" cy="46" r="37" fill="url(#mascotHead)" stroke="#e9efff" stroke-width="1"/>
-                <ellipse cx="75" cy="29" rx="13" ry="8" fill="#fff" opacity=".58" transform="rotate(-25 75 29)"/>
+                <g class="mascot-leg-left"><path d="M74 118q-8 22-17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="14" stroke-linecap="round"/><ellipse cx="54" cy="161" rx="13" ry="7" fill="url(#mascotLimb)"/></g>
+                <g class="mascot-leg-right"><path d="M106 118q8 22 17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="14" stroke-linecap="round"/><ellipse cx="126" cy="161" rx="13" ry="7" fill="url(#mascotLimb)"/></g>
+                <g class="mascot-arm-left"><path d="M62 78Q43 90 37 115" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
+                <g class="mascot-arm-right"><path d="M118 78q19 12 25 37" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
+                <rect x="65" y="64" width="50" height="69" rx="24" fill="url(#mascotTorso)" stroke="#e8efff" stroke-width="1"/>
+                <ellipse cx="78" cy="87" rx="7" ry="25" fill="#fff" opacity=".28"/>
+                <ellipse cx="90" cy="43" rx="27" ry="30" fill="url(#mascotHead)" stroke="#e9efff" stroke-width="1"/>
+                <ellipse cx="79" cy="27" rx="9" ry="6" fill="#fff" opacity=".58" transform="rotate(-25 79 27)"/>
               </g>
             </svg>
           </div>
