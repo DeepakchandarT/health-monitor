@@ -42,7 +42,7 @@
     @media(min-width:1051px) and (max-height:700px){.topbar{min-height:42px}.chart.hero-chart{height:60px}.mascot-card{height:130px;min-height:130px}.mascot-stage{height:118px}.mascot-svg{width:110px;height:118px}.mini{height:105px;min-height:105px}.donut-layout{height:64px}.donut{width:58px;height:58px}.ring{width:58px;height:58px}.bottom-grid>.card{height:85px;min-height:85px}.current-card{height:200px;min-height:200px}.current-bars{height:100px}}
     @media(max-width:1050px){body{padding:16px}.dashboard{grid-template-columns:1fr}.right{grid-template-columns:1fr 1fr}.table{grid-column:1/-1}}@media(max-width:780px){.app{padding:12px;border-radius:20px}.controls{grid-template-columns:1fr auto}.overview-title{grid-column:1/-1}.summary-row{grid-template-columns:1fr 1fr}.mini-grid,.bottom-grid,.right{grid-template-columns:1fr}.table{grid-column:auto}.chart.hero-chart{height:220px}.mascot-card{grid-template-columns:1fr 180px}.mascot-facts{grid-column:1/-1;grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){body{padding:7px}.topbar{padding:9px 10px;gap:5px}.brand{font-size:12px}.brand-mark{width:29px;height:29px;font-size:17px}.top-actions{gap:3px}.icon-btn{width:29px;height:29px}.status-pill{min-height:29px;padding:4px 6px;font-size:8px}.controls{gap:6px}.control-actions{gap:4px}.btn{padding:5px 7px}.summary-row{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr}.donut-layout{grid-template-columns:1fr}.current-stats{grid-template-columns:1fr 1fr 1fr}.table-head,.table-row{grid-template-columns:1.2fr .8fr}.table-head>:nth-child(3),.table-row>:nth-child(3){display:none}.footer{flex-direction:column}.mascot-card{grid-template-columns:1fr;gap:0;text-align:center;padding:18px}.mascot-copy p{margin:auto}.mascot-stage{height:185px}.mascot-facts{grid-template-columns:repeat(2,1fr)}}
     .mascot-arm-left,.mascot-arm-right,.mascot-leg-left,.mascot-leg-right{transform-box:view-box}
-    .mascot-arm-left{transform-origin:62px 78px}.mascot-arm-right{transform-origin:118px 78px}.mascot-leg-left{transform-origin:74px 118px}.mascot-leg-right{transform-origin:106px 118px}
+    .mascot-arm-left{transform-origin:70px 77px}.mascot-arm-right{transform-origin:110px 77px}.mascot-leg-left{transform-origin:74px 118px}.mascot-leg-right{transform-origin:106px 118px}
     .mascot-card[data-activity="walking"] .mascot-body{animation:side-step .8s ease-in-out infinite}
     .mascot-card[data-activity="walking"] .mascot-arm-left,.mascot-card[data-activity="walking"] .mascot-leg-right{animation:stride .8s ease-in-out infinite}
     .mascot-card[data-activity="walking"] .mascot-arm-right,.mascot-card[data-activity="walking"] .mascot-leg-left{animation:stride .8s ease-in-out -.4s infinite}
@@ -64,17 +64,13 @@
     @keyframes jack-leg-right{0%,100%{transform:rotate(10deg)}50%{transform:rotate(-15deg)}}
     @keyframes ground-shadow{0%,100%{transform:scaleX(1);opacity:.8}50%{transform:scaleX(.65);opacity:.4}}
     @media(prefers-reduced-motion:reduce){.mascot-card .mascot-shadow{animation:none!important}}
-    /* Quiet surfaces, readable hierarchy, and a dedicated companion stage. */
-    :root{--ink:#172b3a;--muted:#718391;--blue:#128b88;--blue2:#35a9a0;--pink:#a9b7cc;--line:#e3eaee;--shadow:0 8px 24px #1832420a}
-    body{background:#eaf0f2;color:var(--ink)}.app{background:#f5f8f9;border:1px solid #fff;box-shadow:0 20px 65px #18324212;border-radius:20px}
-    .topbar{background:#fff;color:#172b3a;box-shadow:none;border:1px solid var(--line);border-radius:12px}.topbar:before,.topbar:after{display:none}.brand{font-size:17px;letter-spacing:-.6px}.brand-mark{background:#e4f4f0;color:#128b88}.icon-btn{color:#617682;background:#f2f6f7}.icon-btn:hover{background:#e4efee}.status-pill{color:#24766c;background:#eaf6f2;border:0}.dot.live{background:#18a887;box-shadow:none}
-    .controls{box-shadow:none;background:transparent;border:0;padding-left:4px;padding-right:4px}.overview-title strong{font-size:14px}.source-settings{color:#718391;font-weight:600}.btn{border-color:#dce6e8;color:#46616d}.btn.primary{background:#168b84;border-color:#168b84;color:white}
-    .card{box-shadow:0 2px 8px #18324204;border-radius:13px;border-color:#e3eaee}.head h2{font-weight:650;letter-spacing:-.2px}.head p{color:#7a8c98}.tag{color:#4f6878;background:#eef3f6;border-radius:20px;font-weight:650}.tag.synthetic{color:#167e6b;background:#e8f5ef}.tag.warn{color:#996922;background:#fff4dc}.range-tabs{display:none}
-    .summary{background:#f6f9fa;border:0;border-left:3px solid #b8dcd7;border-radius:6px}.summary:nth-child(2){border-color:#b6c5e6}.summary:nth-child(3){border-color:#e6cba3}.summary:nth-child(4){border-color:#b9ced6}.summary span{letter-spacing:.04em;color:#617581}.summary strong{font-weight:650;font-variant-numeric:tabular-nums;color:#203b49}.summary small{color:#7d8e98}
-    .mascot-card{background:linear-gradient(110deg,#173644,#234956);border:1px solid #294e5b;border-radius:14px;box-shadow:0 5px 16px #16364215}.mascot-card:before{display:none}.mascot-copy .kicker{color:#8fbdbb;letter-spacing:.12em}.mascot-copy h2{font-weight:600;letter-spacing:-.6px}.mascot-copy p{color:#b5cbd2}.activity-tag{color:#c9e7df;background:#ffffff08;border-color:#ffffff16;font-weight:500}.mascot-stage{background:radial-gradient(ellipse at 50% 55%,#8ebfbc30,transparent 65%);border-radius:50%}.mascot-fact{border:0;border-left:1px solid #ffffff24;border-radius:0;background:transparent;padding-left:14px}.mascot-fact span{color:#9fbcc5;font-weight:500;letter-spacing:.04em}.mascot-fact strong{font-size:17px;font-weight:600;font-variant-numeric:tabular-nums}.mascot-shadow{background:#081c26;filter:blur(3px)}.mascot-svg{filter:drop-shadow(3px 9px 5px #071c2755)}
-    .avatar.orange,.avatar.purple,.avatar.cyan,.avatar.pink{color:#52727d;background:#eaf1f3;border-radius:7px}.badge{color:#208272;background:#eaf5f0}.table-head{background:#f7f9fa;color:#7a8e99}.table-row{border-color:#edf1f3}.device-name strong{font-weight:600}.progress-icon,.progress-icon.pink{background:#e6f1ef;color:#258476}.fill.pink{background:#91acae}.footer{color:#85959f}.big-stat strong{font-weight:600}.ring-content strong,.current-stat strong{font-weight:650}
-    @media(min-width:1051px){.head h2{font-size:13px}.summary strong{font-size:20px}.mascot-card{grid-template-columns:minmax(0,1fr) 160px minmax(100px,.55fr)}.mascot-copy h2{font-size:21px}.legend-row{font-size:9px}.table-row{font-size:10px}.mascot-fact strong{font-size:16px}}
-  </style>
+    /* Balanced columns keep the companion at the exact center of its panel. */
+    .mascot-stage{background:radial-gradient(ellipse at center,#ffffff18,transparent 68%);border-radius:50%}
+    .mascot-svg{filter:drop-shadow(2px 8px 5px #263c9b44)}
+    .mascot-facts{width:100%;max-width:210px;justify-self:end}
+    .mascot-copy h2{font-weight:650}.mascot-fact strong{font-weight:650}
+    @media(min-width:781px){.mascot-card{grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr)}.mascot-facts{grid-column:auto;grid-template-columns:1fr}.mascot-stage{justify-self:center;width:150px}.mascot-copy{min-width:0}.mascot-copy p{max-width:240px}}
+    @media(max-width:780px){.mascot-card{grid-template-columns:1fr;text-align:center}.mascot-copy p{margin:auto}.mascot-stage{justify-self:center;width:150px}.mascot-facts{max-width:none;grid-template-columns:1fr 1fr}}  </style>
 </head>
 <body>
   <main class="app">
@@ -115,9 +111,9 @@
               <g class="mascot-body">
                 <g class="mascot-leg-left"><path d="M74 118q-8 22-17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="14" stroke-linecap="round"/><ellipse cx="54" cy="161" rx="13" ry="7" fill="url(#mascotLimb)"/></g>
                 <g class="mascot-leg-right"><path d="M106 118q8 22 17 41" fill="none" stroke="url(#mascotLimb)" stroke-width="14" stroke-linecap="round"/><ellipse cx="126" cy="161" rx="13" ry="7" fill="url(#mascotLimb)"/></g>
-                <g class="mascot-arm-left"><path d="M62 78Q43 90 37 115" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
-                <g class="mascot-arm-right"><path d="M118 78q19 12 25 37" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
-                <rect x="65" y="64" width="50" height="69" rx="24" fill="url(#mascotTorso)" stroke="#e8efff" stroke-width="1"/>
+                <g class="mascot-arm-left"><path d="M70 77Q48 88 43 113" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
+                <g class="mascot-arm-right"><path d="M110 77q22 11 27 36" fill="none" stroke="url(#mascotLimb)" stroke-width="12" stroke-linecap="round"/></g>
+                <path d="M90 64C73 64 64 74 66 91L70 116C72 130 79 134 90 134S108 130 110 116L114 91C116 74 107 64 90 64Z" fill="url(#mascotTorso)" stroke="#e8efff" stroke-width="1"/>
                 <ellipse cx="78" cy="87" rx="7" ry="25" fill="#fff" opacity=".28"/>
                 <ellipse cx="90" cy="43" rx="27" ry="30" fill="url(#mascotHead)" stroke="#e9efff" stroke-width="1"/>
                 <ellipse cx="79" cy="27" rx="9" ry="6" fill="#fff" opacity=".58" transform="rotate(-25 79 27)"/>
