@@ -43,28 +43,28 @@
     @media(max-width:1050px){body{padding:16px}.dashboard{grid-template-columns:1fr}.right{grid-template-columns:1fr 1fr}.table{grid-column:1/-1}}@media(max-width:780px){.app{padding:12px;border-radius:20px}.controls{grid-template-columns:1fr auto}.overview-title{grid-column:1/-1}.summary-row{grid-template-columns:1fr 1fr}.mini-grid,.bottom-grid,.right{grid-template-columns:1fr}.table{grid-column:auto}.chart.hero-chart{height:220px}.mascot-card{grid-template-columns:1fr 180px}.mascot-facts{grid-column:1/-1;grid-template-columns:repeat(2,1fr)}}@media(max-width:520px){body{padding:7px}.topbar{padding:9px 10px;gap:5px}.brand{font-size:12px}.brand-mark{width:29px;height:29px;font-size:17px}.top-actions{gap:3px}.icon-btn{width:29px;height:29px}.status-pill{min-height:29px;padding:4px 6px;font-size:8px}.controls{gap:6px}.control-actions{gap:4px}.btn{padding:5px 7px}.summary-row{grid-template-columns:1fr 1fr}.mini-grid{grid-template-columns:1fr}.donut-layout{grid-template-columns:1fr}.current-stats{grid-template-columns:1fr 1fr 1fr}.table-head,.table-row{grid-template-columns:1.2fr .8fr}.table-head>:nth-child(3),.table-row>:nth-child(3){display:none}.footer{flex-direction:column}.mascot-card{grid-template-columns:1fr;gap:0;text-align:center;padding:18px}.mascot-copy p{margin:auto}.mascot-stage{height:185px}.mascot-facts{grid-template-columns:repeat(2,1fr)}}
     .mascot-arm-left,.mascot-arm-right,.mascot-leg-left,.mascot-leg-right{transform-box:view-box}
     .mascot-arm-left{transform-origin:70px 77px}.mascot-arm-right{transform-origin:110px 77px}.mascot-leg-left{transform-origin:74px 118px}.mascot-leg-right{transform-origin:106px 118px}
-    .mascot-card[data-activity="walking"] .mascot-body{animation:side-step .8s ease-in-out infinite}
-    .mascot-card[data-activity="walking"] .mascot-arm-left,.mascot-card[data-activity="walking"] .mascot-leg-right{animation:stride .8s ease-in-out infinite}
-    .mascot-card[data-activity="walking"] .mascot-arm-right,.mascot-card[data-activity="walking"] .mascot-leg-left{animation:stride .8s ease-in-out -.4s infinite}
-    .mascot-card[data-activity="walking"] .mascot-arm-left,.mascot-card[data-activity="walking"] .mascot-leg-left{opacity:.72}
-    .mascot-card[data-activity="exercising"] .mascot-body{animation:jack-hop 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="exercising"] .mascot-arm-left{animation:jack-left 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="exercising"] .mascot-arm-right{animation:jack-right 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="exercising"] .mascot-leg-left{animation:jack-leg-left 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="exercising"] .mascot-leg-right{animation:jack-leg-right 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="exercising"] .mascot-shadow{animation:ground-shadow 1.1s ease-in-out infinite}
-    .mascot-card[data-activity="walking"] .mascot-shadow{animation:ground-shadow .8s ease-in-out infinite}
+    /* Deliberate, low-amplitude movement; silhouette stays unchanged. */
+    .mascot-body{transform-box:view-box;transform-origin:90px 160px}
+    .mascot-card[data-activity="resting"] .mascot-body{animation:calm-breath 4.8s cubic-bezier(.45,0,.55,1) infinite}
+    .mascot-card[data-activity="walking"] .mascot-body{animation:walk-settle 1.8s ease-in-out infinite}
+    .mascot-card[data-activity="walking"] .mascot-arm-left{animation:easy-arm 1.8s ease-in-out infinite}
+    .mascot-card[data-activity="walking"] .mascot-arm-right{animation:easy-arm 1.8s ease-in-out -.9s infinite}
+    .mascot-card[data-activity="walking"] .mascot-leg-right{animation:easy-step 1.8s ease-in-out infinite}
+    .mascot-card[data-activity="walking"] .mascot-leg-left{animation:easy-step 1.8s ease-in-out -.9s infinite}
+    .mascot-card[data-activity="exercising"] .mascot-body{animation:stretch-rise 3.8s cubic-bezier(.45,0,.55,1) infinite}
+    .mascot-card[data-activity="exercising"] .mascot-arm-left{animation:stretch-left 3.8s cubic-bezier(.45,0,.55,1) infinite}
+    .mascot-card[data-activity="exercising"] .mascot-arm-right{animation:stretch-right 3.8s cubic-bezier(.45,0,.55,1) infinite}
+    .mascot-card[data-activity="exercising"] .mascot-leg-left,.mascot-card[data-activity="exercising"] .mascot-leg-right{animation:none}
+    .mascot-card .mascot-shadow{animation:none;opacity:.55}
     .motion-lines{display:none}.mascot-card[data-activity="unavailable"] .mascot-svg{opacity:.9}
-    @keyframes side-step{0%,100%{transform:translate(-7px,0) scaleX(.72) rotate(-5deg)}25%,75%{transform:translate(0,-4px) scaleX(.72) rotate(-5deg)}50%{transform:translate(7px,0) scaleX(.72) rotate(-5deg)}}
-    @keyframes stride{0%,100%{transform:rotate(-28deg)}50%{transform:rotate(28deg)}}
-    @keyframes jack-hop{0%,100%{transform:translateY(0) scaleY(.98)}25%,75%{transform:translateY(-10px)}50%{transform:translateY(-5px)}}
-    @keyframes jack-left{0%,100%{transform:rotate(0)}50%{transform:rotate(145deg)}}
-    @keyframes jack-right{0%,100%{transform:rotate(0)}50%{transform:rotate(-145deg)}}
-    @keyframes jack-leg-left{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(15deg)}}
-    @keyframes jack-leg-right{0%,100%{transform:rotate(10deg)}50%{transform:rotate(-15deg)}}
-    @keyframes ground-shadow{0%,100%{transform:scaleX(1);opacity:.8}50%{transform:scaleX(.65);opacity:.4}}
-    @media(prefers-reduced-motion:reduce){.mascot-card .mascot-shadow{animation:none!important}}
-    /* Balanced columns keep the companion at the exact center of its panel. */
+    @keyframes calm-breath{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.012)}}
+    @keyframes walk-settle{0%,50%,100%{transform:translateY(0) rotate(0)}25%{transform:translateY(-1.5px) rotate(-1deg)}75%{transform:translateY(-1.5px) rotate(1deg)}}
+    @keyframes easy-arm{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
+    @keyframes easy-step{0%,100%{transform:rotate(-9deg) translateY(0)}25%{transform:rotate(0) translateY(-3px)}50%{transform:rotate(9deg) translateY(0)}75%{transform:rotate(0) translateY(0)}}
+    @keyframes stretch-rise{0%,15%,85%,100%{transform:scaleY(1)}45%,55%{transform:scaleY(1.025)}}
+    @keyframes stretch-left{0%,15%,85%,100%{transform:rotate(0)}45%,55%{transform:rotate(105deg)}}
+    @keyframes stretch-right{0%,15%,85%,100%{transform:rotate(0)}45%,55%{transform:rotate(-105deg)}}
+    @media(prefers-reduced-motion:reduce){.mascot-card .mascot-body,.mascot-card .mascot-arm-left,.mascot-card .mascot-arm-right,.mascot-card .mascot-leg-left,.mascot-card .mascot-leg-right,.mascot-card .mascot-shadow{animation:none!important}}    /* Balanced columns keep the companion at the exact center of its panel. */
     .mascot-stage{background:radial-gradient(ellipse at center,#ffffff18,transparent 68%);border-radius:50%}
     .mascot-svg{filter:drop-shadow(2px 8px 5px #263c9b44)}
     .mascot-facts{width:100%;max-width:210px;justify-self:end}
