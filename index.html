@@ -52,8 +52,9 @@
     .mascot-card[data-activity="walking"] .mascot-leg-right{animation:easy-step 1.8s ease-in-out infinite}
     .mascot-card[data-activity="walking"] .mascot-leg-left{animation:easy-step 1.8s ease-in-out -.9s infinite}
     .mascot-card[data-activity="exercising"] .mascot-body{animation:stretch-rise 3.8s cubic-bezier(.45,0,.55,1) infinite}
-    .mascot-card[data-activity="exercising"] .mascot-arm-left{animation:stretch-left 3.8s cubic-bezier(.45,0,.55,1) infinite}
-    .mascot-card[data-activity="exercising"] .mascot-arm-right{animation:stretch-right 3.8s cubic-bezier(.45,0,.55,1) infinite}
+    .mascot-card[data-activity="exercising"] .mascot-arm-left,.mascot-card[data-activity="exercising"] .mascot-arm-right{animation:none;transform:none}
+    .mascot-card[data-activity="exercising"] .mascot-arm-left path{animation:overhead-left 3.8s ease-in-out infinite}
+    .mascot-card[data-activity="exercising"] .mascot-arm-right path{animation:overhead-right 3.8s ease-in-out infinite}
     .mascot-card[data-activity="exercising"] .mascot-leg-left,.mascot-card[data-activity="exercising"] .mascot-leg-right{animation:none}
     .mascot-card .mascot-shadow{animation:none;opacity:.55}
     .motion-lines{display:none}.mascot-card[data-activity="unavailable"] .mascot-svg{opacity:.9}
@@ -62,8 +63,9 @@
     @keyframes easy-arm{0%,100%{transform:rotate(-10deg)}50%{transform:rotate(10deg)}}
     @keyframes easy-step{0%,100%{transform:rotate(-9deg) translateY(0)}25%{transform:rotate(0) translateY(-3px)}50%{transform:rotate(9deg) translateY(0)}75%{transform:rotate(0) translateY(0)}}
     @keyframes stretch-rise{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.015)}}
-    @keyframes stretch-left{0%,100%{transform:rotate(0)}50%{transform:rotate(150deg)}}
-    @keyframes stretch-right{0%,100%{transform:rotate(0)}50%{transform:rotate(-150deg)}}
+    @keyframes overhead-left{0%,100%{d:path("M70 77Q48 88 43 113")}25%,75%{d:path("M70 77Q38 67 30 43")}45%,55%{d:path("M70 77Q42 35 64 0")}}
+    @keyframes overhead-right{0%,100%{d:path("M110 77Q132 88 137 113")}25%,75%{d:path("M110 77Q142 67 150 43")}45%,55%{d:path("M110 77Q138 35 116 0")}}
+    @media(prefers-reduced-motion:reduce){.mascot-card .mascot-arm-left path,.mascot-card .mascot-arm-right path{animation:none!important}}
     @media(prefers-reduced-motion:reduce){.mascot-card .mascot-body,.mascot-card .mascot-arm-left,.mascot-card .mascot-arm-right,.mascot-card .mascot-leg-left,.mascot-card .mascot-leg-right,.mascot-card .mascot-shadow{animation:none!important}}    /* Balanced columns keep the companion at the exact center of its panel. */
     .mascot-stage{background:radial-gradient(ellipse at center,#ffffff18,transparent 68%);border-radius:50%}
     .mascot-svg{filter:drop-shadow(2px 8px 5px #263c9b44)}
